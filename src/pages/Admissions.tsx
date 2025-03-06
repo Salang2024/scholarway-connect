@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
@@ -6,7 +5,7 @@ import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, Calendar, FileText, ClipboardCheck, PencilRuler, DollarSign, BadgeHelp } from 'lucide-react';
+import { CheckCircle, Calendar, FileText, ClipboardCheck, PencilRuler, DollarSign, BadgeHelp, Award } from 'lucide-react';
 
 const Admissions = () => {
   useEffect(() => {
@@ -137,7 +136,6 @@ const Admissions = () => {
                   Start Your Application
                 </Button>
               </motion.div>
-            </div>
           </div>
         </section>
         
