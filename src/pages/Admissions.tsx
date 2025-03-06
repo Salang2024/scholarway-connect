@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
@@ -136,6 +137,7 @@ const Admissions = () => {
                   Start Your Application
                 </Button>
               </motion.div>
+            </div>
           </div>
         </section>
         
