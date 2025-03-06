@@ -106,13 +106,13 @@ const Contact = () => {
                     {
                       icon: MapPin,
                       title: "Our Location",
-                      info: "123 Education Drive, Nairobi, Kenya",
+                      info: "123 Education Drive, Dar es Salaam, Tanzania",
                       delay: 0.3
                     },
                     {
                       icon: Phone,
                       title: "Phone Number",
-                      info: "+254 123 456 789",
+                      info: "+255 123 456 789",
                       delay: 0.4
                     },
                     {
@@ -145,10 +145,6 @@ const Contact = () => {
                       </div>
                     </motion.div>
                   ))}
-                </div>
-                <div className="mr-4 mt-1">
-                  <MapPin className="h-5 w-5 text-salang-600" />
-                  <p>Dar es Salaam, Tanzania</p>
                 </div>
               </div>
               
@@ -237,7 +233,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                We're located in a convenient and accessible part of Nairobi
+                We're located in a convenient and accessible part of Dar es Salaam, Tanzania
               </motion.p>
             </div>
             
@@ -249,7 +245,7 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127641.31172465244!2d36.75690087444456!3d-1.3031933987256446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1688393988297!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126894.21106488431!2d39.1710271085059!3d-6.792342145217027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4c1c85f0a247%3A0xf0557514dcb56507!2sDar%20es%20Salaam%2C%20Tanzania!5e0!3m2!1sen!2sus!4v1716033097015!5m2!1sen!2sus" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

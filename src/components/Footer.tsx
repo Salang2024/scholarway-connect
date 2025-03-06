@@ -60,13 +60,13 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-salang-400 mt-0.5" />
                 <span className="text-gray-300">
-                  123 Education Avenue, Salang District<br />
-                  Nairobi, Kenya
+                  123 Education Avenue<br />
+                  Dar es Salaam, Tanzania
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-salang-400" />
-                <span className="text-gray-300">+254 123 456 789</span>
+                <span className="text-gray-300">+255 123 456 789</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-salang-400" />
