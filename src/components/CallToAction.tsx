@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { motion, useInView } from 'framer-motion';
 import { School } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CallToAction = () => {
   const ref = useRef(null);
@@ -54,12 +55,16 @@ const CallToAction = () => {
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Button size="lg" variant="default" className="bg-white hover:bg-gray-100 text-salang-600 font-medium">
-              Apply for Admission
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Schedule a Visit
-            </Button>
+            <Link to="/admissions">
+              <Button size="lg" variant="default" className="bg-white hover:bg-gray-100 text-salang-600 font-medium">
+                Apply for Admission
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                Schedule a Visit
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>

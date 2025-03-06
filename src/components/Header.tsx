@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface NavLink {
   name: string;
@@ -54,17 +55,19 @@ export const Header = () => {
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {links.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className="text-gray-700 hover:text-salang-600 transition-all py-2 text-sm font-medium"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <Button className="bg-salang-600 hover:bg-salang-700 text-white">
-            Apply Now
-          </Button>
+          <Link to="/admissions">
+            <Button className="bg-salang-600 hover:bg-salang-700 text-white">
+              Apply Now
+            </Button>
+          </Link>
         </nav>
         
         {/* Mobile menu button */}
@@ -91,18 +94,20 @@ export const Header = () => {
           >
             <div className="px-6 py-4 space-y-3 flex flex-col">
               {links.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="text-gray-700 hover:text-salang-600 py-2 text-base font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
-              <Button className="bg-salang-600 hover:bg-salang-700 text-white w-full mt-4">
-                Apply Now
-              </Button>
+              <Link to="/admissions" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button className="bg-salang-600 hover:bg-salang-700 text-white w-full mt-4">
+                  Apply Now
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}

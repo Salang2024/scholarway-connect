@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { School, BookOpen, Users, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,12 +65,16 @@ const Hero = () => {
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <Button size="lg" className="bg-salang-600 hover:bg-salang-700 text-white">
-                Apply for Admission
-              </Button>
-              <Button size="lg" variant="outline" className="border-salang-600 text-salang-600">
-                Explore Programs
-              </Button>
+              <Link to="/admissions">
+                <Button size="lg" className="bg-salang-600 hover:bg-salang-700 text-white">
+                  Apply for Admission
+                </Button>
+              </Link>
+              <Link to="/primary">
+                <Button size="lg" variant="outline" className="border-salang-600 text-salang-600">
+                  Explore Programs
+                </Button>
+              </Link>
             </motion.div>
           </div>
           
