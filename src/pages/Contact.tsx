@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
@@ -18,12 +17,41 @@ const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent",
-      description: "Thank you for contacting Salang School. We will get back to you soon.",
-    });
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      // In a real implementation, this would be your backend API endpoint
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: JSON.stringify({
+          access_key: "YOUR-WEB3FORMS-KEY", // You'll need to get this
+          name: formData.get("name"),
+          email: formData.get("email"),
+          subject: formData.get("subject"),
+          message: formData.get("message"),
+          to_email: "salangachambanenje@gmail.com"
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      toast({
+        title: "Message Sent",
+        description: "Thank you for contacting Salang School. We will get back to you soon.",
+      });
+      
+      // Reset form
+      e.currentTarget.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   return (
@@ -32,7 +60,7 @@ const Contact = () => {
       <main>
         <PageHero 
           title="Contact Us" 
-          subtitle="Get in touch with our admissions team and staff to learn more about Salang School"
+          subtitle="Get in touch with our admissions team and staff to learn more about Salang School in Dar es Salaam, Tanzania"
           backgroundImage="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
         />
         
@@ -117,6 +145,10 @@ const Contact = () => {
                       </div>
                     </motion.div>
                   ))}
+                </div>
+                <div className="mr-4 mt-1">
+                  <MapPin className="h-5 w-5 text-salang-600" />
+                  <p>Dar es Salaam, Tanzania</p>
                 </div>
               </div>
               

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { GraduationCap, BookOpen, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 interface NavLink {
@@ -43,7 +43,11 @@ export const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center space-x-2">
-          <GraduationCap className="h-8 w-8 text-salang-600" />
+          <img 
+            src="/lovable-uploads/995d0c97-4741-418b-a5b8-f516b220e4b2.png" 
+            alt="Salang School" 
+            className="h-12 w-12"
+          />
           <span className="font-display text-2xl font-bold text-gray-900">Salang School</span>
         </a>
         
